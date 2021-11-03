@@ -2,5 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Iam Akhil Reddy Nagireddy 
-  button(type="button", class="btn btn-secondary") PressMe
+  p No changes in index PUG file<br><br>
+    button(type="button" class="btn btn-success" onClick="update()") Press Me
+  div(id="target") Display
+  script.
+    var client_count=0;
+    function update(){
+      client_count=client_count+1;
+      document.getElementById("target").innerHTML=`Value now ${client_count}`;
+    }
+  a(href='phones') phones 
